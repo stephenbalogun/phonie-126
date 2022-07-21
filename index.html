@@ -4,13 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name of chosen challenge</title>
+    <title>Phonie-126</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
-    <h2>make some magic here!!</h2>
+    <h1>Phonie-126</h1>
+    <p> Please fill out this form with the required information</p>
+
+    <form action="">
+        <fieldset>
+            <label>
+                Enter Your FirstName:
+                <input type="text" required />
+            </label>
+            <label>
+                Enter Your LastName:
+                <input type="text" required />
+            </label>
+
+        </fieldset>
+
+        <fieldset>
+            <label>
+                Enter Your Phone Number:
+                <input minlength=11 required />
+            </label>
+            <label>
+                <input type="checkbox" />
+                Send me information about promotions
+            </label>
+        </fieldset>
+
+        <fieldset>
+        <label>
+            Enter your EmailAddress:
+            <input type="email" required />
+        </label>
+        <label>
+            Enter Your Password:
+            <input type="password" required minlength=8 />
+        </label>
+        </fieldset>
+
+        <label>
+            <input type="checkbox" required/>
+            I accept the terms and conditions
+        </label>
+        <input type="submit" value="Submit" />
+    </form>
+
+
+
 
     <!-- // ============= EEND DO NOT EDIT ============== // -->
     <script src="index.mjs" type="module"></script>
