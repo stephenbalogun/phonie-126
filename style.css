@@ -4,8 +4,10 @@ Set up box-sizing for all elements to border-box
 ===============================
 */
 
+
 html {
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 *,
@@ -22,8 +24,9 @@ Set up mobile-first using default properties
 */
 body {
     width: 100%;
-    height: 100vh;
-    margin: 0;
+    height: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
     background-color: #1b1b32;
     color: #f5f6f7;
     font-family: 'Lato', 'Fira Sans', 'Roboto Condensed', sans-serif;
@@ -94,11 +97,6 @@ Change appearance based on media size
     margin: 3%;
     }
 
-
-    body {
-    background-image: url(images/altschool3.png);
-    background-size: cover;
-    }
 
     main {
         width: 75vw;
