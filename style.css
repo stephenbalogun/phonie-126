@@ -4,10 +4,12 @@ Set up box-sizing for all elements to border-box
 ===============================
 */
 
+
 html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 body {
@@ -141,6 +143,7 @@ Change appearance based on media size
         width: 38vw;
         height: 60vw;
     }
+
 
     .form-input {
         margin-bottom: .5rem;
