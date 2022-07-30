@@ -1,4 +1,25 @@
 /* 
+=============================================
+Import font
+=============================================
+*/
+
+@font-face {
+    font-family: "Alex Brush";
+    src: url("AlexBrush-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Kaushan Script";
+    src: url("KaushanScript-Regular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* 
 ===============================
 Set up box-sizing for all elements to border-box
 ===============================
@@ -6,6 +27,8 @@ Set up box-sizing for all elements to border-box
 
 html {
     box-sizing: border-box;
+    height: 100%;
+    font-size: 10px;
 }
 
 *,
@@ -21,25 +44,23 @@ Set up mobile-first using default properties
 ==========================================
 */
 body {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
     background-color: #1b1b32;
     color: #f5f6f7;
     font-family: 'Lato', 'Fira Sans', 'Roboto Condensed', sans-serif;
-    font-variant: normal;
+    height: inherit;
 }
 
 
-h1,
-p, 
 form {
     margin: 5%;
+    font-size: 1.5rem;
 }
 
+
 h1 {
-    margin-top: 0;
+    font-family: "Kaushan Script", "Alex Brush", Arial, Helvetica, sans-serif;
     letter-spacing: 2px;
+    font-weight:600;
 }
 
 label {
@@ -54,29 +75,45 @@ input {
 
 input[type="submit"] {
     padding: 2%;
-    width: 100px;
+    width: 50px;
     background-color:rgb(97, 153, 193);
     color: #fff;
+    font-size: 1rem;
     font-weight: 600;
     border-style: none;
-    float: right;
-    margin-right: 10%;
+    margin-left: 60%;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: rgba(50, 143, 235, 0.801);
+    background-color: rgba(78, 158, 239, 0.801);
 }
 
 
 input[type="submit"]:active {
     border: 2px solid black;
     color: black;
+    background-color: rgba(204, 24, 24, 0.934);
 }
 
 .check-input {
     color: #f48a7f
 }
 
+
+body {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(auto, 1fr));
+    grid-template-rows: repeat(10, minmax(auto, 1fr));
+    overflow-y: hidden;
+}
+
+main {
+    grid-row: 2 / 10;
+    grid-column: 2 / 12;
+    box-shadow: 1px 1px 15px;
+    border-radius: 5px;
+}
 
 
 /* 
@@ -88,33 +125,35 @@ Change appearance based on media size
 
 @media all and (min-width: 640px) {
 
-    h1,
-    p, 
-    form {
-    margin: 3%;
-    }
-
-
     body {
-    background-image: url(images/altschool3.png);
-    background-size: cover;
+        background-image: url(images/altschool3.png);
+        background-size: cover;
+    }
+    
+    main {
+        writing-mode: horizontal-tb;
+        grid-row: 2 / 10;
+        grid-column: 3 / 11;
+        box-shadow: 1px 1px 12px;
+        color: #1b1b32;
+        background-color: #fff;
+    }
+    input[type="submit"] {
+        margin-left: 75%;
+        font-size: 1.5rem;
+        width: 100px;
     }
 
-    main {
-        width: 75vw;
-        margin:  auto;
-        background-color: #fff;;
-        color: #1b1b32;
-        box-shadow: 1px 1px 12px;
-        border-radius: 5px;
-        padding: 2%;
-        padding-bottom: 5%;
-    }
+
+
     
 }
 
-@media all and (min-width: 780px) {
+@media all and (min-width: 960px) {
+
     main {
-        width: 50vw;
+        grid-row: 2 / 10;
+        grid-column: 3 / 11;
+        /* max-width: 700px; */
     }
 }
