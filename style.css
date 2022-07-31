@@ -170,7 +170,8 @@ Change appearance based on media size
         color: #1b1b32;
         background-color: #fff;
     }
-    input[type="submit"] {
+    input[type="submit"],
+    input[type="reset"] {
         margin-left: 70%;
         font-size: 1.5rem;
         width: 100px;
