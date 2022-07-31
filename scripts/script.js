@@ -5,11 +5,10 @@ let carrier_logo = document.querySelector("img");
 
 let phone_no = document.querySelector('input[type="tel"]')
 
-
-let submit = document.querySelector('input[type="submit"]')
+let submit = document.querySelector('form')
 
      
-submit.addEventListener('click', () => {
+submit.addEventListener('submit', () => {
 
     if (/^\+234/.test(phone_no.value.substring(0, 7)) == true) {
 
@@ -27,6 +26,9 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/mtn-300.png");
                 document.querySelector('.logo').style.display = "inherit";
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
+
                 break;
     
             case "+234809":
@@ -36,6 +38,8 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/etisalat-300.png");
                 document.querySelector('.logo').style.display = "inherit";
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
                 break;
     
             case "+234802":
@@ -49,6 +53,8 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/airtel.png");
                 document.querySelector('.logo').style.display = "inherit";
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
                 break;
     
             case "+234805":
@@ -60,7 +66,8 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/glo-300.png");
                 document.querySelector('.logo').style.display = "inherit";
-    
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
                 break;
     
         }
@@ -81,6 +88,8 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/mtn-300.png");
                 document.querySelector('.logo').style.display = "inherit";
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
                 break;
     
             case "0809":
@@ -90,6 +99,8 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/etisalat-300.png");
                 document.querySelector('.logo').style.display = "inherit";
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
                 break;
     
             case "0802":
@@ -103,6 +114,8 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/airtel.png");
                 document.querySelector('.logo').style.display = "inherit";
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
                 break;
     
             case "0805":
@@ -114,6 +127,8 @@ submit.addEventListener('click', () => {
     
                 carrier_logo.setAttribute('src', "images/glo-300.png");
                 document.querySelector('.logo').style.display = "inherit";
+                document.querySelector('input[type="submit"]').type = "reset";
+                document.querySelector('input[type="reset"]').value = "reset";
     
                 break;
     
@@ -123,3 +138,11 @@ submit.addEventListener('click', () => {
         alert("error: The phone number supplied does not appear to be valid! Check that the phone number either begins with +234 or 0[789]")
     }
 })
+
+
+submit.addEventListener("reset", () => {
+    document.querySelector('input[type="reset"]').type = "submit";
+    document.querySelector('input[type="submit"]').value = "submit";
+    document.querySelector('.logo').style.display = "none";
+})
+
